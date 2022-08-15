@@ -1,0 +1,522 @@
+set plot_page 50 50
+set character 0.9
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!
+pen 0 /wei 3
+g\draw text -1 35 "CII"
+pen 1 /wei 3
+g\draw text 1 35 "\u1\u2CO" 
+pen 3 /wei 3
+g\draw text 3.5 35 "\u1\u3CO" 
+pen 6 /wei 3
+g\draw text 6.5 35 "OI x 4" 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!shell
+pen 0 /wei 3
+
+set view 0.1 0.3 0.5 0.6
+
+
+
+file in rcw49-cii-regrid.great
+set off 145 -90
+find
+set match 5
+find
+get f
+!aver /nocheck /wei eq
+modif freq 1900536.90
+set unit v v
+sm bo 5
+set wind -15 1
+bas 1
+set mod x -20 40
+set mod y -2.9 25
+pen 0 /wei 3
+spec
+
+axis xl -20 40 /label n;
+axis xu -20 40 /label n;
+axis yl -2.9 25 /label o;
+axis yr -2.9 25 /label n;
+ 
+
+file in rcw49-12co-regrid.apex
+find
+set match 5
+find
+get f
+!aver /nocheck /wei eq
+modif freq 345795.990
+sm bo 2
+pen 1 /wei 3
+spec
+
+file in rcw49-13co-regrid.apex
+find
+set match 5
+find
+get f
+!aver /nocheck /wei eq
+modif freq 330587.965
+sm bo 2
+pen 3 /wei 3
+spec
+
+
+file in rcw49-oi-regrid.great
+find
+!set match 4
+!find
+get f
+!aver /nocheck /wei eq
+modif freq 4744778
+sm bo 5
+set wind -5 22
+bas 1
+let ry ry*4
+pen 6 /wei 2
+spec
+
+pen 0 /wei 3
+draw text 6.5 29 "shell"
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!nc
+
+pen 0 /wei 3
+
+set view 0.1 0.3 0.7 0.8
+axis xl -20 40 /label n;
+axis xu -20 40 /label n;
+axis yl -2.9 35 /label o;
+axis yr -2.9 35 /label n;
+
+
+file in rcw49-cii-regrid.great
+set off -95 470
+!set off -75 460 !also remove setmod x t and y t from oi code lines 
+find
+set match 4
+find
+get f
+!aver /nocheck /wei eq
+modif freq 1900536.90
+set unit v v
+set mod x -20 40
+set mod y -2.9 35
+sm bo 5
+set wind -5 22
+bas 1
+pen 0 /wei 3
+spec
+
+!g\draw text -8 25 "CII" /user 
+
+file in rcw49-12co-regrid.apex
+find
+set match 4
+find
+get f
+!aver /nocheck /wei eq
+modif freq 345795.990
+sm bo 2
+pen 1 /wei 3
+spec
+
+!g\draw text 30 25 "\u1\u2CO" /user 
+
+file in rcw49-13co-regrid.apex
+find
+set match 4
+find
+get f
+!aver /nocheck /wei eq
+modif freq 330587.965
+sm bo 2
+pen 3 /wei 3
+spec
+
+!g\draw text 30 18 "\u1\u3CO" /user 
+
+set mod x -40 50
+set mod y t
+file in rcw49-oi-regrid.great
+find
+get f
+!aver /nocheck /wei eq
+modif freq 4744778
+sm bo 5
+set wind -28 -24 -10 5
+bas 4
+let ry ry*4
+pen 6 /wei 2
+set mod x -20 40
+set mod y -2.9 35
+spec
+
+!g\draw text -10 17 "OI x 4" /user 
+
+
+pen 0 /wei 3
+draw text 7 39 "nc" 
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!ridge
+pen 0 /wei 3
+
+set view 0.1 0.3 0.6 0.7
+axis xl -20 40 /label n;
+axis xu -20 40 /label n;
+axis yl -2.9 50 /label o;
+axis yr -2.9 50 /label n;
+
+
+file in rcw49-cii-regrid.great
+set off -40 25
+find
+set match 4
+find
+get f
+!aver /nocheck /wei eq
+modif freq 1900536.90
+set unit v v
+set mod x -20 40
+set mod y -2.9 50
+sm bo 5
+set wind -5 22
+bas 1
+pen 0 /wei 3
+spec
+ 
+
+file in rcw49-12co-regrid.apex
+find
+set match 4
+find
+get f
+!aver /nocheck /wei eq
+modif freq 345795.990
+sm bo 2
+pen 1 /wei 3
+spec
+
+file in rcw49-13co-regrid.apex
+find
+set match 4
+find
+get f
+!aver /nocheck /wei eq
+modif freq 330587.965
+sm bo 2
+pen 3 /wei 3
+spec
+
+
+file in rcw49-oi-regrid.great
+find
+!set match 4
+!find
+get f
+!aver /nocheck /wei eq
+modif freq 4744778
+sm bo 5
+set wind -5 22
+bas 1
+let ry ry*4
+pen 6 /wei 2
+spec
+
+pen 0 /wei 3
+draw text 6.5 34 "ridge"
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!pillar
+pen 0 /wei 3
+
+set view 0.1 0.3 0.4 0.5
+axis xl -20 40 /label n;
+axis xu -20 40 /label n;
+axis yl -2.9 39 /label o;
+axis yr -2.9 39 /label n;
+
+
+file in rcw49-cii-regrid.great
+set off 0 -140
+find
+set match 5
+find
+get f
+!aver /nocheck /wei eq
+modif freq 1900536.90
+set unit v v
+set mod x -20 40
+set mod y -2.9 39
+sm bo 5
+set wind -5 22
+bas 1
+pen 0 /wei 3
+spec
+ 
+
+file in rcw49-12co-regrid.apex
+find
+set match 5
+find
+get f
+!aver /nocheck /wei eq
+modif freq 345795.990
+sm bo 2
+pen 1 /wei 3
+spec
+
+file in rcw49-13co-regrid.apex
+find
+set match 5
+find
+get f
+!aver /nocheck /wei eq
+modif freq 330587.965
+sm bo 2
+pen 3 /wei 3
+spec
+
+
+file in rcw49-oi-regrid.great
+find
+!set match 4
+!find
+get f
+!aver /nocheck /wei eq
+modif freq 4744778
+sm bo 5
+set wind -5 22
+bas 2
+let ry ry*4
+pen 6 /wei 2
+spec
+
+pen 0 /wei 3
+draw text 6.5 24 "pillar"
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!p1
+pen 0 /wei 3
+
+set view 0.1 0.3 0.3 0.4
+axis xl -20 40 /label n;
+axis xu -20 40 /label n;
+axis yl -2.9 25 /label o;
+axis yr -2.9 25 /label n;
+
+
+file in rcw49-cii-regrid.great
+!set off -132 212.5
+!find
+!set match 5
+set off -123 200
+!set match 25
+set match 5
+find
+!get f
+aver /nocheck /wei eq
+modif freq 1900536.90
+set unit v v
+set mod x -20 40
+set mod y -2.9 25
+sm bo 5
+set wind -15 0 5 10
+bas 1
+pen 0 /wei 3
+spec
+ 
+
+file in rcw49-12co-regrid.apex
+find
+set match 5
+find
+!get f
+aver /nocheck /wei eq
+modif freq 345795.990
+sm bo 2
+pen 1 /wei 3
+spec
+
+file in rcw49-13co-regrid.apex
+find
+set match 5
+find
+!get f
+aver /nocheck /wei eq
+modif freq 330587.965
+sm bo 2
+pen 3 /wei 3
+spec
+
+
+file in rcw49-oi-regrid.great
+find
+!set match 4
+!find
+!get f
+aver /nocheck /wei eq
+modif freq 4744778
+sm bo 5
+set wind -15 0 
+bas 2
+let ry ry*4
+pen 6 /wei 2
+spec
+
+pen 0 /wei 3
+draw text 6.5 19 "p1"
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!p3
+pen 0 /wei 3
+
+set view 0.1 0.3 0.2 0.3
+axis xl -20 40 /label n;
+axis xu -20 40 /label n;
+axis yl -2.9 35 /label o;
+axis yr -2.9 35 /label n;
+
+
+file in rcw49-cii-regrid.great
+!set off -130 100
+!find
+!set match 5
+!set off 160 107.5
+set off 150 100
+set match 5
+find
+get f
+!aver /nocheck /wei eq
+modif freq 1900536.90
+set unit v v
+set mod x -20 40
+set mod y -2.9 35
+sm bo 5
+set wind -15 5 6 22
+bas 1
+pen 0 /wei 3
+spec
+ 
+
+file in rcw49-12co-regrid.apex
+find
+set match 5
+find
+get f
+!aver /nocheck /wei eq
+modif freq 345795.990
+sm bo 2
+pen 1 /wei 3
+spec
+
+file in rcw49-13co-regrid.apex
+find
+set match 5
+find
+get f
+!aver /nocheck /wei eq
+modif freq 330587.965
+sm bo 2
+pen 3 /wei 3
+spec
+
+
+file in rcw49-oi-regrid.great
+find
+!set match 4
+!find
+get f
+!aver /nocheck /wei eq
+modif freq 4744778
+sm bo 5
+set wind -15 5 6 22
+bas 1
+let ry ry*4
+pen 6 /wei 2
+spec
+
+pen 0 /wei 3
+draw text 6.5 14 "p3"
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!p7
+pen 0 /wei 3
+
+set view 0.1 0.3 0.1 0.2
+axis xl -20 40 /label p;
+axis xu -20 40 /label n;
+axis yl -2.9 15 /label o;
+axis yr -2.9 15 /label n;
+
+
+g\label "velocity (km s\u-\u1)" /x 2.5
+g\label "\iT\dm\db (K)" /y 3.5
+
+file in rcw49-cii-regrid.great
+!set off -10 370
+!find
+!set match 5
+set off -3.5 370
+set match 5
+find
+get f
+!aver /nocheck /wei eq
+modif freq 1900536.90
+set unit v v
+set mod x -20 40
+set mod y -2.9 15
+sm bo 5
+set wind -10 0
+bas 1
+pen 0 /wei 3
+spec
+ 
+
+file in rcw49-12co-regrid.apex
+find
+set match 5
+find
+get f
+!aver /nocheck /wei eq
+modif freq 345795.990
+sm bo 2
+pen 1 /wei 3
+spec
+
+file in rcw49-13co-regrid.apex
+find
+set match 5
+find
+get f
+!aver /nocheck /wei eq
+modif freq 330587.965
+sm bo 2
+pen 3 /wei 3
+spec
+
+
+file in rcw49-oi-regrid.great
+find
+!set match 4
+!find
+get f
+!aver /nocheck /wei eq
+modif freq 4744778
+sm bo 5
+set wind -15 0
+bas 1
+let ry ry*4
+pen 6 /wei 2
+spec
+
+pen 0 /wei 3
+draw text 6.5 9 "p7"
+
+
