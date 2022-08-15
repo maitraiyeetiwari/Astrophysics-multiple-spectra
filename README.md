@@ -6,7 +6,7 @@ I plotted spectra towards different regions of a luminous star forming region na
 To make this plot, I used an astronomical software named GILDAS, which is popular in the astronomical community for analysing data. 
 
 # Observation files
-CII, CO, OI observation files were all regrided to the same angular resolution. 
+CII, CO, OI observation files were all regrided to the same angular resolution. This data was observed with SOFIA and APEX telescopes. 
 
 # Method
 Baseline subtractions were done for every spectrum before plotting.
